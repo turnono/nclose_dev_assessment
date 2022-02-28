@@ -22,8 +22,8 @@
 ## Frontend Candidate
 ### Prerequisite
 - Code editor of your choosing.
-- [Node](https://nodejs.org/en/) version `???`
-- [Angular](https://angular.io/) version `???`
+- [Node](https://nodejs.org/en/) version `12.20`
+- [Angular](https://angular.io/) version `13`
 
 ### Requirements
 - Install and configure all required components listed in [prerequisites](#prerequisite).
@@ -35,8 +35,7 @@
 
 ### Frontend Assessment
 
-[Return to Index](#table-of-content)
-
+- [Assessment](https://github.com/Nclose-ZA/dev_assessment/tree/production/Frontend%20Assesment)
 ---
 ## Project Links
 [Nclose Website](https://www.nclose.com/)
