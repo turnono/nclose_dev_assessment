@@ -2,7 +2,7 @@
 
 ## Welcome! 👋
 
-Congrats on recieving this coding challenge.
+Congrats on receiving this coding challenge.
 
 **To do this challenge, you need a good understanding of HTML, CSS, Javascript, Typescript and Angular.**
 
