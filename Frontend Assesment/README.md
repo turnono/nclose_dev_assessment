@@ -13,6 +13,7 @@ Your challenge is to build out this task app and get it looking as close to the 
 Your users should be able to:
 
 - See useable UI elements built with Angular Material.
+- See components keep their ratio when scaling down to smaller screens using media queries.
 - See hover states for all interactive elements on the page.
 - Add new tasks to the list.
 - Delete tasks from the list.
