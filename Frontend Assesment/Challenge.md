@@ -3,6 +3,7 @@
 ## Table of Content
 - [Requirements](#requirements)
 - [The Challenge](#the-challenge)
+- [Style Guide](style-guide.md)
 
 ### Requirements
 - Code editor of your choosing.
