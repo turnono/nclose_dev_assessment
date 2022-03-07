@@ -1,0 +1,72 @@
+mat-form-field.mat-form-field {
+  height: 63px;
+  width: 500px;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.heading {
+  color: #FFFFFF;
+  font-size: 42px;
+  position: absolute;
+}
+
+input {
+  border: 1px solid #7e7e7e;
+  height: 63px;
+  width: 500px;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 18px;
+  text-indent: 20px;
+  color: #FFFFFF;
+}
+
+input:disabled {
+  color: #FFFFFF;
+}
+
+input::placeholder {
+  color: #7e7e7e;
+}
+
+.input-group {
+  display: flex;
+  margin-top: 20px;
+}
+
+.task-list {
+  padding-top: 30px;
+}
+
+.input-button {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.md-button.md-raised.md-primary.formPage:not(.disabledclassname) {
+  position: right !important;
+  color: #FFFFFF;
+  background-color: #008cba;
+}
+.add-btn {
+  background: #00bfd4;
+}
+
+.remove-btn {
+  background: #ef4f16;
+}
+
+.clear-button {
+  margin-top: 80px;
+  margin-right: 400px;
+  background-color: #00bfd4;
+}
+
+@media screen and (max-width: 600px) {
+  mat-form-field.mat-form-field {
+    width: 100%;
+  }
+}

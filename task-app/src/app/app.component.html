@@ -1,0 +1,32 @@
+<div class="header">
+  <img src="../assets/nclose_logo.png" class="logo" />
+</div>
+
+<div class="content">
+  <Label class="heading">Tasks</Label>
+
+  <mat-form-field appearance="standard">
+    <div class="input-group">
+      <input matInput placeholder="Add new task" [(ngModel)]="currentTask">
+      <button (click)="addTask()" [disabled]="!currentTask" mat-mini-fab color="primary" class="input-button add-btn">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </mat-form-field>
+
+
+  <div class="task-list">
+    <mat-form-field appearance="standard" *ngFor="let task of tasks; let i = index">
+      <div class="input-group">
+        <input disabled matInput [value]="task">
+        <button (click)="removeTask(i)" mat-mini-fab color="warn" class="input-button remove-btn">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+      </div>
+    </mat-form-field>
+  </div>
+
+  <button (click)="clearTasks()" *ngIf="tasks.length != 0" mat-raised-button color="primary" class="clear-button">Clear
+    tasks</button>
+
+  <div>
