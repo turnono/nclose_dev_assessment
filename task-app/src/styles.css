@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #424242;
+}
+
+.header {
+  position: absolute;
+  padding: 20px 20px;
+  top: 0px;
+  left: 0px;
+}
+
+.content {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, 0);
+  padding: 30px 30px 30px 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 60%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 801px) {
+  .content {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .content {
+    width: 80%;
+  }
+}
+
+.alert-add {
+  background: green;
+}
+
+.alert-remove {
+  background: orangered;
+}
