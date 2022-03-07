@@ -1,0 +1,168 @@
+@import "nclose-color-palette.less";
+
+.clear {
+  clear: both !important;
+}
+
+.gap5 {
+  height: 5px;
+}
+
+.gap10 {
+  height: 10px;
+}
+
+.gap15 {
+  height: 15px;
+}
+
+.gap20 {
+  height: 20px;
+}
+
+.gap25 {
+  height: 25px;
+}
+
+.gap30 {
+  height: 30px;
+}
+
+.gap40 {
+  height: 40px;
+}
+
+.gap50 {
+  height: 50px;
+}
+
+.gap60 {
+  height: 60px;
+}
+
+.gap70 {
+  height: 70px;
+}
+
+.gap80 {
+  height: 80px;
+}
+
+.gap90 {
+  height: 90px;
+}
+
+.gap100 {
+  height: 100px;
+}
+
+// Material form fields styles
+.mat-form-field {
+  width: 500px;
+  height: 63px;
+
+  @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+    width: 300px;
+  }
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: @white;
+}
+
+.mat-form-field-label {
+  color: @light-grey;
+  font-size: 18px;
+}
+
+.mat-form-field-invalid input.mat-input-element {
+  color: @white;
+  font-size: 18px;
+  caret-color: @light-grey;
+}
+
+input.mat-input-element {
+  color: @white;
+}
+
+.mat-focused .mat-form-field-label {
+  color: @white !important;
+  caret-color: @light-grey;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white !important;
+  outline: none !important;
+}
+
+.mat-focus {
+  outline: none !important;
+}
+
+.mat-mini-fab.mat-accent {
+  background-color: @light-grey;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: @light-grey;
+}
+.mat-input-element {
+  caret-color: @light-grey;
+  color: @white;
+}
+
+.mat-form-field-required-marker {
+  display: none;
+}
+// fix for floatLable never
+.floatLabel {
+  &.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+    .mat-form-field-label {
+    transform: none;
+    width: initial;
+    opacity: 0;
+  }
+  &.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+    .mat-form-field-outline-gap {
+    border-top-color: inherit;
+  }
+}
+
+//Material card styles
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
+  border-radius: 4;
+  width: 500px;
+  background: @dark-grey;
+  @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+    width: 300px;
+  }
+}
+
+.mat-card {
+  font-family: Arial;
+  color: @white;
+}
+
+//Mat button styles
+.mat-flat-button.mat-primary {
+  background-color: @button-cyan;
+}
+
+.delete-button {
+  .mat-mini-fab.mat-accent {
+    background-color: @vivid-orange;
+  }
+}
+
+//Mat snackbar styles
+.success.mat-snack-bar-container {
+  background: @success-green;
+  color: @white;
+}
+
+.error.mat-snack-bar-container {
+  background: @vivid-orange;
+  color: @white;
+}

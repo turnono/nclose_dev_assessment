@@ -1,0 +1,66 @@
+<div class="clear gap100"></div>
+<div>
+  <h1>Tasks</h1>
+</div>
+<div class="clear gap20"></div>
+<form #form="ngForm" (ngSubmit)="addTodo(form)">
+  <div class="div-rows">
+    <div>
+      <mat-form-field
+        class="floatLabel"
+        floatLabel="never"
+        appearance="outline"
+      >
+        <mat-label>{{ inputLabel }}</mat-label>
+        <input
+          matInput
+          ngModel
+          #todoTextField="ngModel"
+          name="text"
+          type="text"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="add-button-container">
+      <div>
+        <button
+          type="submit"
+          mat-mini-fab
+          [ngStyle]="{
+            'background-color': todoTextField.valid ? '#00bfd4' : '#7e7e7e'
+          }"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="todoTextField.invalid && showValidationErrors">
+    <p class="help is-danger" *ngIf="todoTextField.errors?.['required']">
+      {{ requiredText }}
+    </p>
+  </div>
+</form>
+
+<div class="clear gap50"></div>
+
+<section class="section">
+  <div class="todo-list-container">
+    <div class="tasks-list">
+      <app-todo-list
+        *ngFor="let todo of todos"
+        [todo]="todo"
+        (deleteClicked)="deleteTodo(todo)"
+      ></app-todo-list>
+    </div>
+  </div>
+</section>
+
+<div class="clear gap50"></div>
+
+<div class="clear-tasks-button">
+  <button mat-flat-button color="primary" (click)="clearTasks()">
+    Clear tasks
+  </button>
+</div>
