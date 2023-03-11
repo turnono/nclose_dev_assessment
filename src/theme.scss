@@ -1,0 +1,26 @@
+@use "@angular/material" as mat;
+
+$my-primary: mat.define-palette(mat.$blue-palette, 500);
+$my-accent: mat.define-palette(mat.$green-palette, 900);
+$my-warn: mat.define-palette(mat.$red-palette, 600);
+
+$my-typography: mat.define-typography-config(
+  $font-family: Roboto,
+  $headline: mat.define-typography-level(42px),
+  $body-1: mat.define-typography-level(18px),
+  $button: mat.define-typography-level(18px),
+);
+
+$my-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+  )
+);
+
+@include mat.core($my-typography);
+
+@include mat.all-component-themes($my-theme);

@@ -1,0 +1,48 @@
+@import "./mixins";
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+
+  img {
+    height: 4rem;
+    margin-right: 1rem;
+  }
+}
+
+.container {
+  @include flexbox(column, center);
+  padding: 1rem;
+  margin-top: 8rem;
+
+  .clear-all {
+    &:hover:not([disabled]) {
+      background-color: #ef5016;
+    }
+  }
+
+  section {
+    width: 40%;
+    margin-bottom: 2rem;
+
+    &:first-child {
+      margin: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen {
+    @each $width, $value in $section-width {
+      @media (max-width: #{$width}px) {
+        section {
+          width: $value;
+        }
+      }
+    }
+  }
+}

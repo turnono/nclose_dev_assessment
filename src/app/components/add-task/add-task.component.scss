@@ -1,0 +1,15 @@
+@import "../../mixins";
+
+.add-task {
+  @include flexbox(row, baseline);
+}
+
+mat-form-field {
+  margin-right: 1rem;
+  min-width: calc(100% - (0.5rem));
+  width: calc(100% - (0.5rem));
+}
+
+.icon-button {
+  @include rotateHover(20);
+}

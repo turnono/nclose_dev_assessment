@@ -1,0 +1,30 @@
+<div class="add-task">
+  <mat-form-field floatLabel="never" appearance="outline">
+    <input
+      matInput
+      placeholder="Adding new todo"
+      [(ngModel)]="newTask"
+      [ngModelOptions]="{ standalone: true }"
+      min="2"
+      maxlength="100"
+      aria-describedby="new-task-add"
+      (keyup.enter)="onAddTask()"
+    />
+  </mat-form-field>
+
+  <button
+    mat-icon-button
+    mat-raised-button
+    (click)="onAddTask()"
+    (keyup.enter)="onAddTask()"
+    aria-label="icon button to add a new task"
+    [disabled]="!newTask || newTask?.length < 2"
+    color="primary"
+    class="icon-button"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<mat-error *ngIf="newTask && newTask?.length < 2">
+  Task must be at least 2 characters long.
+</mat-error>

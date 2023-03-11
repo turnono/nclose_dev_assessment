@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%;
+  background: #424242;
+  color: #ffffff;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.mat-button-disabled {
+  background-color: #7e7e7e !important;
+}

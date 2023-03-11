@@ -1,0 +1,15 @@
+<ul>
+  <li class="tasks" *ngFor="let task of tasks">
+    <mat-label>{{ task }}</mat-label>
+    <button
+      mat-icon-button
+      mat-raised-button
+      (click)="onDeleteTask(task)"
+      aria-label="Delete task"
+      class="icon-button"
+      color="warn"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </li>
+</ul>

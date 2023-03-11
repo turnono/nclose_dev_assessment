@@ -1,0 +1,29 @@
+<header>
+  <img src="assets/nclose_logo.png" alt="NClose Logo" />
+</header>
+
+<div class="container">
+  <section>
+    <h1>Tasks</h1>
+  </section>
+
+  <section>
+    <app-add-task (addTask)="addTask($event)"></app-add-task>
+  </section>
+
+  <section>
+    <app-tasks [tasks]="tasks" (deleteTask)="deleteTask($event)"></app-tasks>
+  </section>
+
+  <section>
+    <button
+      mat-raised-button
+      [disabled]="tasks?.length === 0"
+      (click)="clearTasks()"
+      color="accent"
+      class="clear-all"
+    >
+      Clear Tasks
+    </button>
+  </section>
+</div>
